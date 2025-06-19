@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 1</title>
+    <link rel="stylesheet" href="assignment_10_1.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1>Mobile Number Validation Using JavaScript</h1>
+        <label for="number">Enter Mobile Number</label>
+        <input id="number" placeholder="Enter 10 Digit Mobile Num:"/><br/>
+        <button id="button">Validate</button>
+        <p id="errorMsg"></p>
+    </div>
+</body>
+<script>
+    let numberEl=document.getElementById("number");
+    let errorMsgEl=document.getElementById("errorMsg");
+    let buttonEl=document.getElementById("button");
+    buttonEl.addEventListener("click",function(){
+        if(numberEl.value.length!=10){
+            errorMsgEl.textContent="Please Enter valid Number";
+        }
+        else{
+            errorMsgEl.textContent="";
+        }
+    })
+</script>
+</html>
